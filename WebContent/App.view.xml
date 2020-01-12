@@ -8,8 +8,8 @@
 		showHeader="true"
 		class="sapUiContentPadding">
 		<content>
-				<Select
-                    id="mydd"
+			<Select
+					id="mydd"
 					forceSelection="false"
 					selectedKey="{/SelectedProduct}"
 					items="{
@@ -18,13 +18,13 @@
 					}"
                     change=".onChange">
 					<core:ListItem key="{ProductId}" text="{Name}" icon="{Icon}"/>
-				</Select>
-                <core:Icon
+			</Select>
+			<core:Icon
                    id="cc"
                    class="size2"
 			       color="#64E4CE"
 				   src="{/SelectedIcon}">
-		         </core:Icon>
+			</core:Icon>
 		</content>
 	</Page>
 </mvc:View>

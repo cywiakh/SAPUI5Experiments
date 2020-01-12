@@ -71,21 +71,19 @@ sap.ui.define([
 		},
 
 		onChange: function () {
-           var product_key = this.getView().byId("mydd").getSelectedKey();
-           var label = this.getView().byId("cc");
+			var product_key = this.getView().byId("mydd").getSelectedKey();
+			var data = this.getView().getModel().getData();
 
-           var data = this.getView().getModel().getData();
-
-           var selIndex = 0;
-           for(var i=0;i<data.ProductCollection.length;i++) {
-               if(data.ProductCollection[selIndex].ProductId == product_key) {
+			var selIndex = 0;
+			for(var i=0;i<data.ProductCollection.length;i++) {
+				if(data.ProductCollection[selIndex].ProductId == product_key) {
                    break;
                }
                selIndex++;
-           }
-           var icon_ref = data.ProductCollection[selIndex].Icon;
+			}
+			var icon_ref = data.ProductCollection[selIndex].Icon;
 
-            this.getView().getModel().setProperty("/SelectedIcon", icon_ref)
+			this.getView().getModel().setProperty("/SelectedIcon", icon_ref)
 
         }
 	});
